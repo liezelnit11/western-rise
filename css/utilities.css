@@ -1,0 +1,61 @@
+/* <abra-price /> */
+.abra-price {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  font-size: var(--abra-price-font-size, unset);
+  gap: var(--abra-price-gap, 0.6rem);
+  margin: 0;
+}
+
+.abra-price__item {
+  margin: 0;
+}
+
+.abra-price__item--final {
+  color: var(--abra-final-price-color, #FF0000);
+  font-size: var(--abra-final-price-font-size, unset);
+  text-decoration: var(--abra-final-price-decoration, none);
+}
+
+.abra-price__item--original {
+  color: var(--abra-original-price-color, unset);
+  font-size: var(--abra-original-price-font-size, 0.9em);
+  text-decoration: var(--abra-original-price-decoration, line-through);
+}
+
+/* utilities */
+
+.abra-hide,
+.abra-hidden {
+  display: none !important;
+}
+
+.abra-visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.abra-visually-hidden--inline:not(:focus):not(:active) {
+  margin: 0;
+  height: 1em;
+}
+
+#AbraIconSymbols {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.abra-icon {
+  display: inline-block;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}

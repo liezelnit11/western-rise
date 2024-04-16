@@ -1,0 +1,48 @@
+.abra-notification {
+  background-color: #000000;
+  border-radius: 40px;
+  bottom: 0;
+  color: #FFFFFF;
+  display: inline-flex;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
+  opacity: 0;
+  padding: 1.2em;
+  position: fixed;
+  right: 0;
+  text-decoration: none;
+  transform: translateY(6em);
+  transition: transform 400ms ease, opacity 400ms ease;
+  z-index: 2147483647;
+}
+
+.abra-notification--show {
+  opacity: 1;
+  transform: translateY(-1.2em);
+}
+
+.abra-notification__close {
+  align-self: center;
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  fill: #FFFFFF;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 1em;
+  padding: 0;
+}
+
+.abra-notification__close svg {
+  display: block;
+  height: 1em;
+  width: 1em;
+  max-height: 100%;
+  max-width: 100%;
+  margin: auto;
+}

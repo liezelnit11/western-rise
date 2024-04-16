@@ -1,0 +1,91 @@
+.abra-popup {
+  align-items: stretch;
+  background-color: var(--abra-popup-background, #119d52);
+  border: var(--abra-popup-border-width, 1px) solid
+    var(--abra-popup-border-color, transparent);
+  border-radius: var(--abra-popup-border-radius, 4px);
+  bottom: var(--abra-popup-margin-x, 1rem);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  display: none;
+  font-size: var(--abra-popup-font-size);
+  left: var(--abra-popup-margin-y, 1rem);
+  position: fixed;
+  z-index: var(--abra-popup-z-index, 1000);
+}
+
+.abra-popup::before {
+  content: ' ';
+  visibility: hidden;
+  min-width: var(--abra-popup-close-icon-size, 1.6rem);
+  margin: var(--abra-popup-padding-y, 1rem) var(--abra-popup-padding-x, 1rem);
+  margin-right: 0;
+}
+
+.abra-popup--bottom-right {
+  left: unset;
+  right: var(--abra-popup-margin-x, 1rem);
+}
+
+.abra-popup--bottom-center {
+  left: var(--abra-popup-margin-x, 1rem);
+  right: var(--abra-popup-margin-x, 1rem);
+}
+
+.abra-popup--bottom-center .abra-popup__content {
+  justify-content: center;
+}
+
+.abra-popup--show {
+  display: flex;
+}
+
+.abra-popup__content {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  padding: var(--abra-popup-padding-y, 1rem) var(--abra-popup-padding-x, 1rem);
+}
+
+.abra-popup__icon {
+  display: flex;
+  margin-right: var(--abra-popup-gap, 1rem);
+}
+
+.abra-popup__icon,
+.abra-popup__icon svg {
+  color: var(--abra-popup-icon-color, #ffffff);
+  fill: var(--abra-popup-icon-color, #ffffff);
+  width: var(--abra-popup-icon-size, 1rem);
+  height: var(--abra-popup-icon-size, 1rem);
+}
+
+.abra-popup__text {
+  color: var(--abra-popup-color, #ffffff);
+  font-size: var(--abra-popup-font-size);
+  margin: 0;
+  padding: 0;
+}
+
+.abra-popup__close {
+  display: flex;
+  margin: var(--abra-popup-padding-y, 1rem) var(--abra-popup-padding-x, 1rem);
+  margin-left: 0;
+}
+
+.abra-popup__close-button {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: var(--abra-popup-color, #ffffff);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  min-height: var(--abra-popup-close-icon-size, 1.6rem);
+  min-width: var(--abra-popup-close-icon-size, 1.6rem);
+  padding: 0;
+}
+
+.abra-popup__close-button svg {
+  min-height: var(--abra-popup-close-icon-size, 1rem);
+  min-width: var(--abra-popup-close-icon-size, 1rem);
+}
